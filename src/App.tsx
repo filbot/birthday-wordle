@@ -29,7 +29,7 @@ import {
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
   loadGameStateFromLocalStorage,
-  saveGameStateToLocalStorage,
+  // saveGameStateToLocalStorage,
   setStoredIsHighContrastMode,
   getStoredIsHighContrastMode,
 } from './lib/localStorage'
@@ -146,9 +146,9 @@ function App() {
     setCurrentRowClass('')
   }
 
-  useEffect(() => {
-    saveGameStateToLocalStorage({ guesses, solution })
-  }, [guesses])
+  // useEffect(() => {
+  //   saveGameStateToLocalStorage({ guesses, solution })
+  // }, [guesses])
 
   useEffect(() => {
     if (isGameWon) {
