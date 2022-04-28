@@ -16,7 +16,7 @@ import {
 import {
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
-  WELCOME_INFO_MODAL_MS,
+  // WELCOME_INFO_MODAL_MS,
   DISCOURAGE_INAPP_BROWSERS,
 } from './constants/settings'
 import {
@@ -90,15 +90,15 @@ function App() {
       : false
   )
 
-  useEffect(() => {
-    // if no game state on load,
-    // show the user the how-to info modal
-    if (!loadGameStateFromLocalStorage()) {
-      setTimeout(() => {
-        setIsInfoModalOpen(true)
-      }, WELCOME_INFO_MODAL_MS)
-    }
-  })
+  // useEffect(() => {
+  //   // if no game state on load,
+  //   // show the user the how-to info modal
+  //   if (!loadGameStateFromLocalStorage()) {
+  //     setTimeout(() => {
+  //       setIsInfoModalOpen(true)
+  //     }, WELCOME_INFO_MODAL_MS)
+  //   }
+  // })
 
   useEffect(() => {
     DISCOURAGE_INAPP_BROWSERS &&
@@ -158,13 +158,13 @@ function App() {
 
       showSuccessAlert(winMessage, {
         delayMs,
-        onClose: () => setIsStatsModalOpen(true),
+        onClose: () => setIsStatsModalOpen(false),
       })
     }
 
     if (isGameLost) {
       setTimeout(() => {
-        setIsStatsModalOpen(true)
+        setIsStatsModalOpen(false)
       }, (solution.length + 1) * REVEAL_TIME_MS)
     }
   }, [isGameWon, isGameLost, showSuccessAlert])
