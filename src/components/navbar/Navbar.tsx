@@ -24,7 +24,7 @@ export const Navbar = ({
           onClick={() => setIsInfoModalOpen(true)}
         />
         <p className="text-xl ml-2.5 font-bold dark:text-white">{GAME_TITLE}</p>
-        <div className="right-icons">
+        <div className="right-icons invisible">
           <ChartBarIcon
             className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
             onClick={() => setIsStatsModalOpen(true)}
