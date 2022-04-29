@@ -16,7 +16,6 @@ import {
 import {
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
-  // WELCOME_INFO_MODAL_MS,
   DISCOURAGE_INAPP_BROWSERS,
 } from './constants/settings'
 import {
